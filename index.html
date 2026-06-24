@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bolinhas p5.js</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+</head>
+<body>
+  <script>
+    let espacamento = 50;
 
+    function setup() {
+      createCanvas(400, 400);
+      frameRate(12);
+    }
+
+    function draw() {
+      background(220);
+      
+
+      let s = random(10, 40); 
+      
+      
+      for (let x = 20; x < width; x += espacamento) {
+        for (let y = 20; y < height; y += espacamento) {
+          fill(random(255), random(255), random(255)); 
+          circle(x, y, s);
+        }
+      }
+    }
+  </script>
+</body>
+</html>
